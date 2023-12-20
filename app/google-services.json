@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "236846310616",
+    "project_id": "justicechain-e2bcc",
+    "storage_bucket": "justicechain-e2bcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236846310616:android:7897d14234a48a8c5563ad",
+        "android_client_info": {
+          "package_name": "com.example.justicechain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXnwDxjjYnBI7CvNY1DdhLKOllLxtFCV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
