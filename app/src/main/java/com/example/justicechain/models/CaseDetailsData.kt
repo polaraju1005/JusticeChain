@@ -39,8 +39,72 @@ class CaseDetailsData {
         return caseType
     }
 
+    fun setCaseType(caseType: String){
+        this.caseType =caseType
+    }
+
+    fun getJudgeName():String?{
+        return judgeName
+    }
+
     fun setJudgeName(judgeName: String) {
         this.judgeName = judgeName
+    }
+
+    fun getLawyerName():String?{
+        return lawyerName
+    }
+
+    fun setLawyerName(lawyerName: String){
+        this.lawyerName = lawyerName
+    }
+
+    fun getClientName():String?{
+        return clientName
+    }
+
+    fun setClientName(clientName: String){
+        this.clientName = clientName
+    }
+
+    fun getCaseNum():String?{
+        return caseNum
+    }
+
+    fun setCaseNum(caseType: String){
+        this.caseNum = caseNum
+    }
+
+    fun getFileNum():String?{
+        return fileNum
+    }
+
+    fun setFileNum(fileNum: String){
+        this.fileNum = fileNum
+    }
+
+    fun getFileDate():String?{
+        return fileDate
+    }
+
+    fun setFileDate(fileDate: String){
+        this.fileDate = fileDate
+    }
+
+    fun getPhone():String?{
+        return phone
+    }
+
+    fun setPhone(phone: String){
+        this.phone = phone
+    }
+
+    fun getDesc():String?{
+        return desc
+    }
+
+    fun setDesc(desc: String){
+        this.desc =desc
     }
 
 }

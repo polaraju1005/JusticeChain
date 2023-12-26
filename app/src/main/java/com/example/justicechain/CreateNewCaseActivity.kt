@@ -97,7 +97,7 @@ class CreateNewCaseActivity : AppCompatActivity() {
 
     private fun toClient() {
         refusers =
-            FirebaseDatabase.getInstance().reference.child("Cases").child(clientName)
+            FirebaseDatabase.getInstance().reference.child("Cases").child(clientName).child(caseNum)
         val userHashMap = HashMap<String, Any>()
         userHashMap["caseType"] = caseType
         userHashMap["judgeName"] = judgeName
@@ -124,7 +124,7 @@ class CreateNewCaseActivity : AppCompatActivity() {
 
     private fun toLawyer() {
         refusers =
-            FirebaseDatabase.getInstance().reference.child("Cases").child(lawyerName)
+            FirebaseDatabase.getInstance().reference.child("Cases").child(lawyerName).child(caseNum)
         val userHashMap = HashMap<String, Any>()
         userHashMap["caseType"] = caseType
         userHashMap["judgeName"] = judgeName
@@ -151,7 +151,7 @@ class CreateNewCaseActivity : AppCompatActivity() {
 
     private fun toJudge() {
         refusers =
-            FirebaseDatabase.getInstance().reference.child("Cases").child(judgeName)
+            FirebaseDatabase.getInstance().reference.child("Cases").child(judgeName).child(caseNum)
         val userHashMap = HashMap<String, Any>()
         userHashMap["caseType"] = caseType
         userHashMap["judgeName"] = judgeName

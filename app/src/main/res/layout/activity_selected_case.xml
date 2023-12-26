@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".SelectedCaseActivity">
+
+    <ImageView
+        android:id="@+id/backButtonIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/full_round"
+        android:backgroundTint="@color/white"
+        android:padding="6dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:tint="@color/primary" />
+
+
+    <RelativeLayout
+        android:id="@+id/rvPrefix"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ellipse_39"
+        android:backgroundTint="@color/primary"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtPrefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubuntu"
+            android:text="JC"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/recyclerview_bg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/name_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Case Type                :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/name_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/name_"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Criminal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/jntNumber_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Judge Name           : "
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/jntNumber_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/jntNumber_"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Poly"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/parentNumber_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Lawyer Name          :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/parentNumber_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/parentNumber_"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Vinay"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/stuNumber_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Clinet Name           :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/stuNumber_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/stuNumber_"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Aadil"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/yos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Case number         :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/yos_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/yos"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="71"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/fileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="File number            :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fileNo_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/fileNo"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="112"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="File date               :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fate_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/date"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="20/12/2023"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Phone number     :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/phone_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/phone"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="8367280679"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Description           :"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/desc_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/desc"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="5dp"
+                    android:text="Rash driving"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>

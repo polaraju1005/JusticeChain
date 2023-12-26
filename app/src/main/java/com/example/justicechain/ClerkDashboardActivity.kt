@@ -11,7 +11,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.justicechain.adapters.PostersAdapter
 import com.example.justicechain.models.PostersData
 import com.example.justicechain.utils.LawyerPreferences
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
@@ -24,6 +26,7 @@ class ClerkDashboardActivity : AppCompatActivity() {
 
     private lateinit var clerkText:TextView
     private lateinit var btnCreateNewCase:CardView
+    private lateinit var btnNotificationPush:CardView
     lateinit var swipeTimer: Timer
 
     lateinit var postersViewPager2: ViewPager2
@@ -43,6 +46,7 @@ class ClerkDashboardActivity : AppCompatActivity() {
         LawyerPreferences.init(this)
 
         btnCreateNewCase = findViewById(R.id.btnCreate)
+        btnNotificationPush = findViewById(R.id.btnNotificationPush)
         clerkText = findViewById(R.id.txtClerkName)
 
         postersDataList = ArrayList<PostersData>()
@@ -55,6 +59,21 @@ class ClerkDashboardActivity : AppCompatActivity() {
         carousel = findViewById(R.id.carousel)
         carousel.registerLifecycle(lifecycle)
 
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("TAG", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+//            val msg = getString(R.string.msg_token_fmt, token)
+            Log.d("TAG", token.toString())
+//            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+        })
+
         if (LawyerPreferences.isLogin == true) {
             clerkText.text = LawyerPreferences.lawyerName
         }
@@ -63,6 +82,9 @@ class ClerkDashboardActivity : AppCompatActivity() {
             startActivity(Intent(this@ClerkDashboardActivity,CreateNewCaseActivity::class.java))
         }
 
+        btnNotificationPush.setOnClickListener {
+            startActivity(Intent(this@ClerkDashboardActivity,notificationPushActivity::class.java))
+        }
 
     }
     override fun onStart() {
